@@ -48,7 +48,7 @@ function clearError(input, errorId) {
     document.getElementById(errorId).textContent = '';
 }
 
-// Validate name field (non-empty)
+// Validate name field
 function validateName() {
     const value = nameInput.value.trim();
     if (value === '') {
@@ -59,10 +59,10 @@ function validateName() {
     return true;
 }
 
-
+// Validate email
 function validateEmail() {
     const value = emailInput.value.trim();
-    // Basic email pattern: something@something.something
+    // Basic email validation pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (value === '') {
         displayError(emailInput, 'email-error', 'Email cannot be empty.');
@@ -76,6 +76,7 @@ function validateEmail() {
     return true;
 }
 
+// Validate message
 function validateMessage() {
     const value = msgInput.value.trim();
     if (value === '') {
@@ -91,7 +92,7 @@ form.addEventListener('submit', (event) => {
 // Prevent reload
 event.preventDefault;
 
-// Validate all
+// Validate all and store results
 const nameValid = validateName();
 const emailValid = validateEmail();
 const messageValid = validateMessage();
