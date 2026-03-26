@@ -25,3 +25,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
+
+// Validation for contact form
+const form = document.getElementById('contact-form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const msgInput = document.getElementById('message');
+const successMsg = document.getElementById('success-msg');
+
+
+// Show error and mark field invalid
+function displayError(input, errorId, message) {
+    input.classList.add('invalid');
+    input.classList.remove('valid');
+    document.getElementById(errorId).textContent = message;
+}
+
+// Clear any error and mark field valid
+function clearError(input, errorId) {
+    input.classList.remove('invalid');
+    input.classList.add('valid');
+    document.getElementById(errorId).textContent = '';
+}
