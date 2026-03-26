@@ -109,3 +109,9 @@ body {
 
     footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
 }
+.project-details {
+    display: none;
+}
+.project-details.active {
+    display: block;
+}
