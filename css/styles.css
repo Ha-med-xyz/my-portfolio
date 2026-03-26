@@ -59,8 +59,9 @@ body {
     justify-content: space-between;
 }
 
-section {
-    padding: 7rem 4rem;
+.section {
+    padding: 8rem 8rem 8rem;
+    color: #000;
     margin: auto;
     box-shadow: #252523;
     border-radius: 2px;
