@@ -85,13 +85,21 @@
                 https://github.com/Ha-med-xyz
             </a>
         </div>
+
+        
         <!--Form Placeholder-->
-        <div class="contact-form">
-            <label>Name:</label>
+        <form class="contact-form" id="contact-form">
+            <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Dilly Dally">
-            <label>Email:</label>
-            <input type="email" id="email " placeholder="test@yahoo.ca">
-        </div>
+            <span class="error-msg" id="name-error"></span>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="test@yahoo.ca">
+            <span class="error-msg" id="email-error"></span>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter message here."></textarea>
+            <span class="error-msg" id="message-error"></span>
+            <button type="submit">Send message</button>
+        </form>
     </section>
     <!--Footer-->
     <div class="footer">
