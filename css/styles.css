@@ -1,62 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+}
+
 :root {
-    --bg: #d8e6e7;
-    --bg2: #3c3f41;
-    --border: #2a2a2a;
-    --text: #252523;
+    --bg: #fdfdfd;
+    --primary-color: orange;
+    --white-color: #fdfdfd;
+    --border-color: #e2e8f0;
+    --text-color: #0f172a;
+    --text-muted: #5b6b83;
     --system-ui: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border-bottom: 1px solid var(--border);
-    background-color: var(--bg2);
-    color: white;
-}
-
-section h2 {
-    color: #272729;
-}
-
-nav {
-    list-style: none;
-    display: flex;
-    align-items: flex;
-}
-
-nav a {
-    position: relative;
-
-}
-
-a:hover {
-    background-color: aliceblue;
-}
-
-nav li {
-    display: inline;
-}
-
 body {
-    margin: 0;
     font-family: var(--system-ui);
-    color: var(--text);
     background: var(--bg);
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+.dark {
+    background: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dark h1 {
+    color: #fff
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 8%;
+    align-items: center;
+    background-color: rgba(248, 249, 250, 0.863);
+    z-index: 9;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: default;
+    margin-right: auto;
+}
+
+.navbar a {
+    font-size: 1.25rem;
+    font-size: 500;
+    color: var(--text-muted);
+    transition: 1s;
+    margin-right: 3.5rem;
+    position: relative;
+}
+
+.navbar a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: .2rem;
+    background: var(--primary-color);
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--bg2);
-    color: white;
+    color: var(--text-muted);
     text-align: center;
-    border-top: 1px solid var(--border-dark);
-    display: flex;
-    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 0;
+    font-size: 0.7rem;
     justify-content: space-between;
+}
+
+
+.opening-line {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.name {
+    font-size: 3.8rem;
+    line-height: 1.06;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    letter-spacing: -0.035em;
+    position: relative;
+    z-index: 1;
 }
 
 .section {
@@ -67,16 +108,15 @@ body {
     border-radius: 2px;
 }
 
-.logo {
-    font-family: var(--system-ui);
-    text-decoration: none;
+section h2 {
+    color: #272729;
 }
 
 .project-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
-    border: 1px solid var(--border)
+    border: 1px solid var(--border-color)
 }
 
 .project-card {
@@ -96,22 +136,47 @@ body {
 }
 
 @media (max-width: 900px) {
-    header { padding: 1rem 1.5rem; }
+    header {
+        padding: 1rem 1.5rem;
+    }
 
-    #about { padding: 6rem 1.5rem 4rem; }
-    #about::before { display: none; }
+    #about {
+        padding: 6rem 1.5rem 4rem;
+    }
 
-    #projects { padding: 4rem 1.5rem; }
-    .project-group { grid-template-columns: 1fr; }
+    #about::before {
+        display: none;
+    }
 
-    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-    #contacts { padding: 4rem 1.5rem; }
+    #projects {
+        padding: 4rem 1.5rem;
+    }
 
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+    .project-group {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    #contacts {
+        padding: 4rem 1.5rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 1.5rem;
+    }
 }
+
 .project-details {
     display: none;
 }
+
 .project-details.active {
     display: block;
 }
