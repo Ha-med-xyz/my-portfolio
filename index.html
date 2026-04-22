@@ -20,100 +20,128 @@
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
+
+        <div>
+            <select>
+                <option value="light">Light Mode</option>
+                <option value="dark">Dark Mode</option>
+            </select>
+            <div>
     </header>
 
-    <main class="container"></main>
-    <!--Home-->
-    <section id="home" class="section">
-        <p class="opening-line">Hello, I am</p>
-        <h1 class="name">Hassan Ahmed</h1>
-        <p>I'm a Humber student and aspiring professional with experience in HMTL and Javascript.</p>
-    </section>
+    <main class="container">
+        <!--Home-->
+        <section id="home" class="section">
+            <p class="opening-line">Hello, I am</p>
+            <h1 class="name">Hassan Ahmed</h1>
+            <p>I'm a Humber student and aspiring professional with experience in HMTL, CSS, and Javascript.</p>
+        </section>
 
-    <!--About-->
-    <section id="about" class="section">
-        <h2>Get To Know Me.</h2>
-        <p>I first started using computers as a child and I fell in love with technology.</p>
-    </section>
+        <!--About-->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>Get To Know Me.</h2>
+            </div>
+            <p>My interest in technology began when I was introduced computers as a child. 
+                From that moment on I fell in love with computers and various electronic devices.
+            </p>
+        </section>
 
-    <!--Projects-->
-    <section id="projects" class="section">
-        <h2>Sample Projects.</h2>
-
-        <div class="project-group">
-            <div class="project-card">
-                <h4>Dynamic Blog Website</h4>
-                <p class="text-summary">
-                    A simple blog website that allows users to post, edit, and remove their own blog posts.
-                </p>
-                <div class="project-details">
-                    <p>This website utilizes CRUD functionality to create blog posts. JavaScript manages posts within the browser's local storage.</p>
-                </div>
-                <button class="toggle-button">More...</button>
+        <!--Projects-->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2>Projects.</h2>
             </div>
 
-            <div class="project-card">
-                <p class="text-summary">
-                    Insert second project description here.
-                </p>
-                <div class="project-details">
-                    <p>Lorem ipsum</p>
+            <div class="project-group">
+                <div class="project-card">
+                    <h4>Dynamic Blog Website</h4>
+                    <p class="text-summary">
+                        A simple blog website that allows users to post, edit, and remove their own blog posts.
+                    </p>
+                    <div class="project-details">
+                        <p>Utilized CRUD functionality to allow the creation of blog posts. Implemented JavaScript to manage posts
+                            within the browser's local storage.</p>
+                    </div>
+                    <button class="toggle-button">More...</button>
                 </div>
-                <button class="toggle-button">More...</button>
+
+                <div class="project-card">
+                    <h4>StudySync</h4>
+                    <p class="text-summary">
+                        Web app to help students manage their study time.
+                    </p>
+                    <div class="project-details">
+                        <p>Utilized Javascript and HTML to create a study time tracker app.</p>
+                    </div>
+                    <button class="toggle-button">More...</button>
+                </div>
+
+                <div class="project-card">
+                    <h4>Tasty Bites</h4>
+                    <p class="text-summary">
+                        Recipe website with reviews.
+                    </p>
+                    <div class="project-details">
+                        <p>Utilized CSS to fix broken features, improved readability, and changed style to be visually pleasing.</p>
+                    </div>
+                    <button class="toggle-button">More...</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Skills-->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2>Skills.</h2>
+            </div>
+            <div class="skills">
+                    <span>HTML</span>
+
+                    <span>Javascript</span>
+
+                    <span>CSS</span>
+
+                    <span>Python</span>
+            </div>
+        </section>
+
+        <!--Contact-->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2>Contact Me.</h2>
+            </div>
+            <p>Contact me using my email, github, or the form below.</p>
+            <div class="contact-links">
+                <span class="contact-link">
+                    hassan.rzahmed@outlook.com
+                </span>
+                <span class="contact-link">
+                    https://github.com/Ha-med-xyz
+                </span>
             </div>
 
-            <div class="project-card">
-                <p class="text-summary">
-                    Insert third project description here.
-                </p>
-                <div class="project-details">
-                    <p>Lorem ipsum</p>
-                </div>
-                <button class="toggle-button">More...</button>
-            </div>
 
+            <!--Form Placeholder-->
+            <form class="contact-form" id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="(required)">
+                <span class="error-msg" id="name-error"></span>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="(required)">
+                <span class="error-msg" id="email-error"></span>
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="(required)"></textarea>
+                <span class="error-msg" id="message-error"></span>
+                <button type="submit">Send message</button>
+                <p id="success-msg" class="success-msg"></p>
+            </form>
+        </section>
+        <!--Footer-->
+        <div class="footer">
+            <p>&copy; 2026 Hassan Ahmed. All rights reserved.</p>
         </div>
-    </section>
-
-    <!--Skills-->
-    <section id="skills" class="section">
-        <h2>Skills.</h2>
-        <p>I'm a student aiming to become developer and this is my (under-construction) portfolio.</p>
-    </section>
-
-    <!--Contact-->
-    <section id="contact" class="section">
-        <h2>Contact Me.</h2>
-        <p>You can Reach me by Checking Below</p>
-        <div class="contact-links">
-            <a class="contact-link">
-                hassan.rzahmed@outlook.com
-            </a>
-            <a class="contact-link">
-                https://github.com/Ha-med-xyz
-            </a>
-        </div>
-
-
-        <!--Form Placeholder-->
-        <form class="contact-form" id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Dilly Dally">
-            <span class="error-msg" id="name-error"></span>
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="test@yahoo.ca">
-            <span class="error-msg" id="email-error"></span>
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Enter message here."></textarea>
-            <span class="error-msg" id="message-error"></span>
-            <button type="submit">Send message</button>
-            <p id="success-msg" class="success-msg"></p>
-        </form>
-    </section>
-    <!--Footer-->
-    <div class="footer">
-        <p>&copy; 2026 Hassan Ahmed. All rights reserved.</p>
-    </div>
     </main>
 
     <!--Defer until load-->
