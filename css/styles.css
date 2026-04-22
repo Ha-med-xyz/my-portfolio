@@ -115,17 +115,20 @@ body {
 
 .project-card {
     position: relative;
-    padding: 2.5rem;
     background: var(--card-bg);
     border: 1px solid rgba(148, 163, 184, 0.4);
     border-radius: 18px;
     overflow: hidden;
     box-shadow: var(--card-shadow);
-    height: 220px;
+    height: 500px;
+}
+.project-text {
+    padding: 0 2.5rem;
 }
 
 .project-image {
     height: 300px;
+    margin-left: -50px;
     object-fit: cover;
 }
 
