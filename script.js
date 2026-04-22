@@ -90,7 +90,7 @@ function validateMessage() {
 // Validate form submission
 form.addEventListener('submit', (event) => {
 // Prevent reload
-event.preventDefault;
+event.preventDefault();
 
 // Validate all and store results
 const nameValid = validateName();
